@@ -1,0 +1,5 @@
+name: "qwen2vl"
+hf_id: "Qwen/Qwen2-VL-7B-Instruct"
+dtype: "float16"
+max_new_tokens: 64
+role: "primary"

@@ -1,0 +1,11 @@
+name: "llava_next"
+hf_id: "llava-hf/llava-v1.6-mistral-7b-hf"
+dtype: "float16"
+max_new_tokens: 64
+role: "secondary"
+# NOTE: InternVL2.5 deliberately not used here -- known transformers-version
+# incompatibility (AttributeError: 'InternVLChatModel' object has no
+# attribute 'all_tied_weights_keys'), unrelated to device_map, arising from
+# its trust_remote_code=True modeling code vs. current transformers/accelerate.
+# LLaVA-NeXT is a fully native transformers architecture (no trust_remote_code)
+# and is the recommended second model.

@@ -1,0 +1,11 @@
+name: "hybrid"
+sparse_enabled: true
+dense_enabled: true
+top_k: 5
+rrf_k: 60
+sparse_weight: 1.0
+dense_weight: 1.0
+image_encoder:
+  hf_id: "google/siglip-base-patch16-224"
+  dtype: "float16"
+  batch_size: 32

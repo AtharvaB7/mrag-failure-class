@@ -1,0 +1,4 @@
+name: "sparse"
+sparse_enabled: true
+dense_enabled: false
+top_k: 5

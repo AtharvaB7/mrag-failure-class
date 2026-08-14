@@ -1,0 +1,13 @@
+accelerate
+datasets
+huggingface_hub
+hydra-core
+numpy
+omegaconf
+openai
+pillow
+pytest
+rank_bm25
+torch
+torchvision
+transformers>=4.46

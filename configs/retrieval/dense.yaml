@@ -1,0 +1,8 @@
+name: "dense"
+sparse_enabled: false
+dense_enabled: true
+top_k: 5
+image_encoder:
+  hf_id: "google/siglip-base-patch16-224"
+  dtype: "float16"
+  batch_size: 32
