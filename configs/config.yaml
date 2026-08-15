@@ -1,0 +1,22 @@
+defaults:
+  - model: qwen2vl
+  - retrieval: hybrid
+  - _self_
+
+seed: 42
+limit: null  # set via `+limit=50` CLI override to run on a subset first
+data:
+  dataset_name: "uclanlp/MRAG-Bench"
+  split: "test"
+  cache_dir: "data/cache"
+
+evaluation:
+  contamination_gap_threshold: 0.05
+  judge_backend: "deepseek"  # pluggable: deepseek | claude | openai
+  stratified_sample_frac: 0.15
+
+output_dir: "outputs/${model.name}_${retrieval.name}"
+# NOTE: deterministic (not timestamped) on purpose -- run_eval.py resumes
+# from this exact path if it already contains a partial predictions.jsonl,
+# so repeated runs of the same model+retrieval combo continue rather than
+# starting over or landing in a fresh timestamped directory.
